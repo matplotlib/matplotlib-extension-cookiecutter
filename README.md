@@ -1,11 +1,22 @@
 # Matplotlib 3rd Party Package Cookiecutter
 
-Turn your matplotlib convenience scripts into a proper python package using this cookiecutter. This cookiecutter gives you all the boring stuff such as `Github actions`, a `setup.cfg`, working docs with `sphinx-gallery`, and `pytest-mpl` for free.
-
+Turn your matplotlib convenience scripts into a proper python package using this cookiecutter. 
 ```
 pip install cookiecutter
 cookiecutter gh:ianhi/matplotlib-extension-cookiecutter
 ```
+**Buy why?**
+
+Why use this over just starting with a setup.py? This cookiecutter will provide the infrastructure of open-source project quickly, you can set all this up on your own, but it will take time and can be annoying to get right. With the cookiecutter you get:
+
+- Github actions works
+- Issue Templates
+- Properly set up pacaking 
+- A setup for docs with:
+    - `sphinx-gallery`
+    - `autodoc`
+- The set up for `pytest-mpl
+
 
 ## Building docs
 ```
