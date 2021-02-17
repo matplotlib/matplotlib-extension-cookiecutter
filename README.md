@@ -24,6 +24,11 @@ cd docs
 make watch
 ```
 
+## Setting up readthedocs
+
+Readthedocs is a website that hosts the docs for many projects in the Python ecosystem. You can integrate them with your repo by following the instructions here: https://docs.readthedocs.io/en/stable/webhooks.html
+
+You can also have readthedocs make test builds on PRs by following the instructions here: https://docs.readthedocs.io/en/latest/pull-requests.html
 ## Setting up tests
 
 The best way to do testing for a Matplotlib extension is to use [pytest-mpl](https://github.com/matplotlib/pytest-mpl#about). This project inclues a basic test, but does not pregenerate any baselines images. To make the example test work you first need to generate the baseline with:
