@@ -1,0 +1,57 @@
+name: Test
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  schedule:
+    - cron: "0 16 * * 1" # monday at noon est
+
+jobs:
+  test:
+    name: Python ${{ matrix.python-version }} - mpl ${{ matrix.mpl-version }}
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.8.x', '3.9.x']
+        mpl-version: ['3.3', 'latest']
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        
+      - name: Setup Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+          architecture: 'x64'
+
+      - name: Get pip cache dir
+        id: pip-cache
+        run: |
+          echo "::set-output name=dir::$(pip cache dir)"
+  
+      - name: pip cache
+        uses: actions/cache@v2
+        with:
+          path: ${{ steps.pip-cache.outputs.dir }}
+          key: ${{ runner.os }}-pip-${{ matrix.python-version }}-${{ hashFiles('**/setup.py') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-${{ matrix.python-version }}-
+            ${{ runner.os }}-pip-
+
+      - if: matrix.mpl-version=='latest'
+        name: Install dev Matplotlib
+        run: pip install git+https://github.com/matplotlib/matplotlib.git
+
+      - if: !(matrix.mpl-version=='latest')
+        name: Install matplotlib pinned
+        run: pip install matplotlib~=${matrix.mpl-version}
+
+      - name: Install
+        run: |
+          pip install ".[test]"
+
+      - name: Tests
+        run: |
+          pytest --mpl --color=yes

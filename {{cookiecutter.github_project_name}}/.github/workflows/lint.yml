@@ -1,0 +1,26 @@
+name: Lint
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+      - uses: psf/black@stable
+        with:
+          args: ". --check"
+      - name: docstrings
+        run: |
+          pip install flit
+          pushd $(mktemp -d)
+          git clone https://github.com/Carreau/velin.git --single-branch --depth 1
+          cd velin
+          flit install
+          popd
+          velin . --check

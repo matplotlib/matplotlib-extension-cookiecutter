@@ -1,0 +1,6 @@
+# Ref: https://help.github.com/en/github/building-a-strong-community/configuring-issue-templates-for-your-repository#configuring-the-template-chooser
+blank_issues_enabled: true # default
+contact_links:
+  - name: ❓ Question/Support/Other
+    url: https://discourse.matplotlib.org/c/3rdparty/18
+    about: If you have a usage question
