@@ -15,7 +15,7 @@ jobs:
     strategy:
       matrix:
         python-version: ['3.8.x', '3.9.x']
-        mpl-version: ['3.3', 'latest']
+        mpl-version: ['3.4', 'latest']
     steps:
       - name: Checkout
         uses: actions/checkout@v2
