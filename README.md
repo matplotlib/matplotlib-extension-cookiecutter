@@ -3,7 +3,7 @@
 Turn your matplotlib convenience scripts into a proper python package using this cookiecutter. 
 ```
 pip install cookiecutter
-cookiecutter gh:ianhi/matplotlib-extension-cookiecutter
+cookiecutter gh:matplotlib/matplotlib-extension-cookiecutter
 ```
 **Buy why?**
 
@@ -15,7 +15,7 @@ Why use this over just starting with a setup.py? This cookiecutter will provide 
 - A setup for docs with:
     - `sphinx-gallery`
     - `autodoc`
-- The set up for `pytest-mpl
+- The set up for `pytest-mpl`
 
 
 ## Building docs
@@ -46,6 +46,33 @@ Once you've made your package other people will likely want to use your hard wor
 1. Make a PR to add it to Matplotlib's 3rd party packages page
    - [Example PR](https://github.com/matplotlib/matplotlib/pull/13076)
 2. Tweet about your pacakge and and mention `@matplotlib` for a retweet.
+
+
+## Miscellaneous Advice
+
+Do not use Matplotlib private methods. If you really need the functionality then consider opening a feature request to have Matplotlib provide a public API for what you want.
+
+There is some discussion of how to use Matplotlib docstrings on discourse: https://discourse.matplotlib.org/t/docs-for-a-method-wrapping-a-matplotlib-method/21055
+
+https://colcarroll.github.io/yourplotlib/ is a great read for how to make an extension to Matplotlib.
+
+## LICENSE Advice
+
+You may end up using portions of Matplotlib's code or copying docstrings when making a Matplotlib extension.
+
+As a practical rule: If you end up copying a non-trivial amount of code or docs the safest course of action is to add the Matplotlib license to your project as a derived work. For example see how Matplotlib does it https://github.com/matplotlib/matplotlib/tree/master/LICENSE.
+
+> But what counts as non-trivial?
+
+
+A good rule of thumb is to ask yourself:
+
+    If it were homework and you didn't acknowledge would it be cheating?
+
+If the answer is yes, then you should leave a comment in the code and include a license file in a top level `LICENSE` folder.
+
+
+
 
 ## Releasing to PyPi
 ### Manually
@@ -95,28 +122,6 @@ then draft a new release:
 
 After you fill out the information the Github action will create a new tag for you, build the wheel, and upload it to PyPI.
 
-
-## Miscellaneous Advice
-
-Do not use Matplotlib private methods. If you really need the functionality then consider opening a feature request to have Matplotlib provide a public API for what you want.
-
-There is some discussion of how to use Matplotlib docstrings on discourse: https://discourse.matplotlib.org/t/docs-for-a-method-wrapping-a-matplotlib-method/21055
-
-https://colcarroll.github.io/yourplotlib/ is a great read for how to make an extension to Matplotlib.
-
-## LICENSE Advice
-
-You may end up using portions of Matplotlib's code or copying docstrings when making a Matplotlib extension.
-
-As a practical rule: If you end up copying a non-trivial amount of code or docs the safest course of action is to add the Matplotlib license to your project as a derived work. For example see how Matplotlib does it https://github.com/matplotlib/matplotlib/tree/master/LICENSE.
-
-> But what is non-trivial????
-
-
-practical copyright rules
-
-    If it were homework and you didn't acknowledge would it be cheating?
-    If yes then .... (e..g add a comment and include a license file in ___ folder)
 
 
 ## Credit
