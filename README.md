@@ -11,7 +11,7 @@ Why use this over just starting with a setup.py? This cookiecutter will provide 
 
 - Github actions works
 - Issue Templates
-- Properly set up pacaking 
+- Properly set up packaging 
 - A setup for docs with:
     - `sphinx-gallery`
     - `autodoc`
