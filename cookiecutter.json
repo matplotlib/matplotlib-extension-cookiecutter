@@ -4,7 +4,7 @@
 	"github_organization_name": "",
 	"github_project_name": "",
 	"python_package_name": "{{ cookiecutter.github_project_name | replace('-', '_') }}",
-	"project_short_description": "A 3rd party packge for Matplotlib",
+	"project_short_description": "A 3rd party package for Matplotlib",
 	"year": "2021",
 	"_copy_without_render": [
 		".github/workflows/*"
