@@ -8,7 +8,7 @@ pip install cookiecutter
 cookiecutter gh:matplotlib/matplotlib-extension-cookiecutter
 ```
 
-Add your code to `yourname/yourname/yourcode.py` and you can do 
+Add yoru ccode toa `yourname/yourname/yourcode.py` and you can do 
 ```python 
 from yourname import yourcode
 ```
