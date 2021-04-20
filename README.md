@@ -1,16 +1,24 @@
 # Matplotlib 3rd Party Package Cookiecutter
 
-Turn your matplotlib convenience scripts into a proper python package using this cookiecutter. 
+Turn your matplotlib scripts into a sharable python package using this 
+[cookiecutter](https://cookiecutter.readthedocs.io/en/1.7.2/) recipe:
+
 ```
 pip install cookiecutter
 cookiecutter gh:matplotlib/matplotlib-extension-cookiecutter
 ```
-**Buy why?**
 
-Why use this over just starting with a setup.py? This cookiecutter will provide the infrastructure of open-source project quickly, you can set all this up on your own, but it will take time and can be annoying to get right. With the cookiecutter you get:
+Add your code to `yourname/yourname/yourcode.py` and you can do 
+```python 
+from yourname import yourcode
+```
 
-- Github actions works
-- Issue Templates
+## But why?
+
+Sharing your code on public distribution channels like PyPi requires some infrastructure in terms of setup files that take time and can be annoying to get right. The cookiecutter takes care of this for you, and alos sets up a testing and documentation building environment:
+
+- Github actions work
+- Issue templates
 - Properly set up packaging 
 - A setup for docs with:
     - `sphinx-gallery`
@@ -43,8 +51,8 @@ For full instructions see: https://github.com/matplotlib/pytest-mpl#using
 
 Once you've made your package other people will likely want to use your hard work, and maybe even contribute to it! But for this to happen they need to know about it. The Matplotlib devs also want you to share your package and like to amplify your advertising. So some great steps to take in order to share your package are:
 
-1. Make a PR to add it to Matplotlib's 3rd party packages page
-   - [Example PR](https://github.com/matplotlib/matplotlib/pull/13076)
+1. Make a PR to add it to Matplotlib's 3rd party packages page:
+   - https://matplotlib.org/mpl-third-party/
 2. Tweet about your pacakge and and mention `@matplotlib` for a retweet.
 
 
