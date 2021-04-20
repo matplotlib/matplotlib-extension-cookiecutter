@@ -15,7 +15,7 @@ from yourname import yourcode
 
 ## But why?
 
-Sharing your code on public distribution channels like PyPi requires some infrastructure in terms of setup files that take time and can be annoying to get right. The cookiecutter takes care of this for you, and alos sets up a testing and documentation building environment:
+Sharing your code on public distribution channels like PyPi requires some infrastructure in terms of setup files that take time and can be annoying to get right. The cookiecutter takes care of this for you, and also sets up a testing and documentation building environment:
 
 - Github actions work
 - Issue templates
