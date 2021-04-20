@@ -1,6 +1,6 @@
 # Matplotlib 3rd Party Package Cookiecutter
 
-Turn your matplotlib scripts into a sharable python package using this 
+Turn your matplotlib scripts into a shareable python package using this 
 [cookiecutter](https://cookiecutter.readthedocs.io/en/1.7.2/) recipe:
 
 ```
@@ -15,7 +15,7 @@ from yourname import yourcode
 
 ## But why?
 
-Sharing your code on public distribution channels like PyPi requires some infrastructure in terms of setup files that take time and can be annoying to get right. The cookiecutter takes care of this for you, and alos sets up a testing and documentation building environment:
+Sharing your code on public distribution channels like PyPi requires some infrastructure in terms of setup files that take time and can be annoying to get right. The cookiecutter takes care of this for you, and also sets up a testing and documentation building environment:
 
 - Github actions work
 - Issue templates
@@ -39,7 +39,7 @@ Readthedocs is a website that hosts the docs for many projects in the Python eco
 You can also have readthedocs make test builds on PRs by following the instructions here: https://docs.readthedocs.io/en/latest/pull-requests.html
 ## Setting up tests
 
-The best way to do testing for a Matplotlib extension is to use [pytest-mpl](https://github.com/matplotlib/pytest-mpl#about). This project inclues a basic test, but does not pregenerate any baselines images. To make the example test work you first need to generate the baseline with:
+The best way to do testing for a Matplotlib extension is to use [pytest-mpl](https://github.com/matplotlib/pytest-mpl#about). This project includes a basic test, but does not pregenerate any baselines images. To make the example test work you first need to generate the baseline with:
 
 ```
 pytest --mpl-generate-path=<package-name>/tests/baseline
@@ -53,7 +53,7 @@ Once you've made your package other people will likely want to use your hard wor
 
 1. Make a PR to add it to Matplotlib's 3rd party packages page:
    - https://matplotlib.org/mpl-third-party/
-2. Tweet about your pacakge and and mention `@matplotlib` for a retweet.
+2. Tweet about your package and and mention `@matplotlib` for a retweet.
 
 
 ## Miscellaneous Advice
@@ -108,7 +108,7 @@ To do this you will need to generate a PyPI api token and add it to your reposit
 
 **Generating an api token**
 
-Go to you [PyPI account setttings](https://pypi.org/manage/account/), scroll down to the API tokens section and select "Add API token".
+Go to you [PyPI account settings](https://pypi.org/manage/account/), scroll down to the API tokens section and select "Add API token".
 
 **Adding api token to Github Secrets**
 Once you've have copied the token from PyPI go the `Secrets` section of your Github repo's settings and add the token with the name `PYPI_API_TOKEN`
