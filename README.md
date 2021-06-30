@@ -96,7 +96,7 @@ Then generate an `sdist` and a `wheel`:
 3. `commit -m 'version bump'`
 4. `git tag <version number>`
 5. `git push --tags`
-6. `python -m build -sdist -wheel`
+6. `python -m build -s -w`
 7. `twine upload dist/*`
 
 
