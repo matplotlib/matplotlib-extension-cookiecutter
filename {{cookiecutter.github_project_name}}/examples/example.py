@@ -4,7 +4,7 @@ Example Name
 ------------
 
 A short example showcasing how to use the library. The docstrings will be
-turns in REST by sphinx-gallery.
+converted to RST by sphinx-gallery.
 """
 
 import numpy as np
