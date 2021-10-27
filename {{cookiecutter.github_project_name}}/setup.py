@@ -1,17 +1,12 @@
-from os import path
+from setuptools import setup
 
-from setuptools import find_packages, setup
-
-# extract version
-path = path.realpath("{{ cookiecutter.python_package_name }}/_version.py")
-version_ns = {}
-with open(path, encoding="utf8") as f:
-    exec(f.read(), {}, version_ns)
-version = version_ns["__version__"]
-
+{% if cookiecutter.version_control == 'setuptools-scm' -%}
 setup_args = dict(
-    version=version,
+    use_scm_version={"write_to": "{{cookiecutter.python_package_name}}/_version.py"}
 )
+{%- else -%}
+setup_args = dict()
+{%- endif %}
 
 if __name__ == "__main__":
     setup(**setup_args)
