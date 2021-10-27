@@ -7,6 +7,7 @@
 	"project_short_description": "A 3rd party package for Matplotlib",
 	"version_control": ["setuptools-scm", "_version.py", "bump2version"],
 	"year": "2021",
+	"license": ["BSD license", "MIT license", "No license"],
 	"_copy_without_render": [
 		".github/workflows/*"
     ]
