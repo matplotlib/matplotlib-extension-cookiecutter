@@ -77,8 +77,7 @@ A good rule of thumb is to ask yourself:
 
     If it were homework and you didn't acknowledge would it be cheating?
 
-If the answer is yes, then you should leave a comment in the code and include a license file in a top level `LICENSE` folder.
-
+If the answer is yes, then you should leave a comment in the code and include a license file in a top level `LICENSE` folder. For example, this repo uses code from other projects so their licenses are included in the `LICENSE` folder.
 
 
 
