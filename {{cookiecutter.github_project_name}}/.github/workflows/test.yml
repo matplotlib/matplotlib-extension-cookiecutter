@@ -44,7 +44,7 @@ jobs:
         name: Install dev Matplotlib
         run: pip install git+https://github.com/matplotlib/matplotlib.git
 
-      - if: !(matrix.mpl-version=='latest')
+      - if: matrix.mpl-version!='latest'
         name: Install matplotlib pinned
         run: pip install matplotlib~=${matrix.mpl-version}
 
