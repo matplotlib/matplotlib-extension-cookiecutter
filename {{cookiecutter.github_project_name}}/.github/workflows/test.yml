@@ -46,7 +46,7 @@ jobs:
 
       - if: matrix.mpl-version!='latest'
         name: Install matplotlib pinned
-        run: pip install matplotlib~=${matrix.mpl-version}
+        run: pip install --upgrade --pre --index-url https://pypi.anaconda.org/scipy-wheels-nightly/simple --extra-index-url https://pypi.org/simple matplotlib
 
       - name: Install
         run: |
