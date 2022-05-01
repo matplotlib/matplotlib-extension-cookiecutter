@@ -22,7 +22,10 @@ copyright = '{{ cookiecutter.year }}, {{ cookiecutter.author_name }}'
 author = '{{ cookiecutter.author_name }}'
 
 # The full version, including alpha/beta/rc tags
-from _version import __version__ as release
+try:
+    from _version import __version__ as release
+except ImportError:
+    release = "unknown"
 
 
 # -- General configuration ---------------------------------------------------
