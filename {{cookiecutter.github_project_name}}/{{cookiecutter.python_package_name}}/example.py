@@ -25,7 +25,7 @@ def example_function(ax, data, above_color="r", below_color="k", **kwargs):
         The color of points with `y>0`
     below_color : color-like, default: 'k'
         The color of points with `y<0`
-    kwargs :
+    **kwargs
         Passed through to `ax.scatter`
 
     Returns

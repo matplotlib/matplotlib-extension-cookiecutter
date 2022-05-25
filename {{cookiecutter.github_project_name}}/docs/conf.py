@@ -12,6 +12,7 @@
 #
 import os
 import sys
+
 sys.path.insert(0, os.path.abspath('../{{ cookiecutter.python_package_name }}'))
 
 
@@ -37,7 +38,7 @@ extensions = [
     "numpydoc",
     'sphinx.ext.autodoc',
     'sphinx.ext.inheritance_diagram',
-    'autoapi.sphinx'
+    'autoapi.sphinx',
 ]
 
 sphinx_gallery_conf = {
